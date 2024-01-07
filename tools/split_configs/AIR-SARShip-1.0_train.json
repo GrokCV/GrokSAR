@@ -1,0 +1,23 @@
+{
+    "nproc": 10,
+    "img_dirs": [
+      "datasets/AIR-SARShip-1.0/dota/train/images"
+    ],
+    "ann_dirs": [
+      "datasets/AIR-SARShip-1.0/dota/train/labels"
+    ],
+    "sizes": [
+      512
+    ],
+    "gaps": [
+      200
+    ],
+    "rates": [
+      1.0
+    ],
+    "img_rate_thr": 0.6,
+    "iof_thr": 0.7,
+    "no_padding": false,
+    "save_dir": "datasets/split_AIR-SARShip-1.0/train",
+    "save_ext": ".jpg"
+  }
