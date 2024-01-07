@@ -1,0 +1,23 @@
+{
+  "nproc": 10,
+  "img_dirs": [
+    "datasets/SAR-AIRcraft-1.0/dota/test/images"
+  ],
+  "ann_dirs": [
+    "datasets/SAR-AIRcraft-1.0/dota/test/labels"
+  ],
+  "sizes": [
+    512
+  ],
+  "gaps": [
+    200
+  ],
+  "rates": [
+    1.0
+  ],
+  "img_rate_thr": 0.6,
+  "iof_thr": 0.7,
+  "no_padding": false,
+  "save_dir": "datasets/split_SAR-AIRcraft-1.0/test",
+  "save_ext": ".jpg"
+}
