@@ -1,13 +1,11 @@
-# code-repo-template
-Toolkit for XXXX
-
-空的代码 Repo 模板，全局替换 `code_repo_template` 即可 `python setup.py develop`
+# GrokSAR
+Toolkit for GrokSAR
 
 - [Installation](#installation)
   - [Step 1: Create a conda environment](#step-1-create-a-conda-environment)
   - [Step 2: Install PyTorch](#step-2-install-pytorch)
   - [Step 3: Install OpenMMLab 2.x Codebases](#step-3-install-openmmlab-2x-codebases)
-  - [Step 4: Install `code_repo_template`](#step-4-install-code_repo_template)
+  - [Step 4: Install `groksar`](#step-4-install-groksar)
 - [Model Zoo and Benchmark](#model-zoo-and-benchmark)
   - [Leaderboard](#leaderboard)
   - [Model Zoo](#model-zoo)
@@ -20,14 +18,14 @@ Toolkit for XXXX
 ### Step 1: Create a conda environment
 
 ```shell
-$ conda create --name code_repo_template python=3.9
-$ source activate code_repo_template
+$ conda create --name groksar python=3.9
+$ source activate groksar
 ```
 
 ### Step 2: Install PyTorch
 
 ```shell
-conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.8 -c pytorch -c nvidia
 ```
 
 ### Step 3: Install OpenMMLab 2.x Codebases
@@ -35,22 +33,26 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 ```shell
 # openmmlab codebases
 pip install -U openmim dadaptation --no-input
-mim install mmengine "mmcv>=2.0.0" "mmdet>=3.0.0" "mmsegmentation>=1.0.0" "mmrotate>=1.0.0rc1" mmyolo "mmpretrain>=1.0.0rc7" 'mmagic'
+mim install mmengine "mmcv>=2.0.0" "mmdet>=3.0.0" "mmsegmentation>=1.0.0" "mmrotate>=1.0.0rc1" mmyolo
+# heatmap generation dependencies
+pip install grad-cam
 # other dependencies
-pip install -U ninja scikit-image --no-input
+pip install ninja --no-input
+pip install scikit-learn
+pip install psutil
 ```
 
-### Step 4: Install `code_repo_template`
+### Step 4: Install `groksar`
 
 ```shell
 python setup.py develop
 ```
 
-**Note**: make sure you have `cd` to the root directory of `code_repo_template`
+**Note**: make sure you have `cd` to the root directory of `groksar`
 
 ```shell
-$ git clone git@github.com:GrokCV/code_repo_template.git
-$ cd code_repo_template
+$ git clone git@github.com:GrokCV/groksar.git
+$ cd groksar
 ```
 
 ## Model Zoo and Benchmark
