@@ -599,7 +599,7 @@ class FrequencySpatialFPN(BaseModule):
             DCT2DSpatialTransformLayer(64, 64),
             # SElayer(256,16),
             # GroupAttentionlayer(64 * 64, 32),
-            # SelectGroupFClayer(64*64),
+            SelectGroupFClayer(64*64),
             # SpatialFCAttentionlayer(64*64, 16),
             IDCT2DSpatialTransformLayer(64, 64)
         )
@@ -607,7 +607,7 @@ class FrequencySpatialFPN(BaseModule):
             DCT2DSpatialTransformLayer(32, 32),
             # SElayer(256,16),
             # GroupAttentionlayer(32 * 32, 32),
-            # SelectGroupFClayer(32 * 32),
+            SelectGroupFClayer(32 * 32),
             # SpatialFCAttentionlayer(32*32, 16),
             IDCT2DSpatialTransformLayer(32, 32)
         )
