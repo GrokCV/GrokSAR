@@ -1,16 +1,16 @@
 # GrokSAR
 Toolkit for GrokSAR
 
-- [Installation](#installation)
-  - [Step 1: Create a conda environment](#step-1-create-a-conda-environment)
-  - [Step 2: Install PyTorch](#step-2-install-pytorch)
-  - [Step 3: Install OpenMMLab 2.x Codebases](#step-3-install-openmmlab-2x-codebases)
-  - [Step 4: Install `groksar`](#step-4-install-groksar)
-- [Model Zoo and Benchmark](#model-zoo-and-benchmark)
-  - [Leaderboard](#leaderboard)
-  - [Model Zoo](#model-zoo)
-    - [Method A](#method-a)
-    - [Method B](#method-b)
+- [GrokSAR](#groksar)
+  - [Installation](#installation)
+    - [Step 1: Create a conda environment](#step-1-create-a-conda-environment)
+    - [Step 2: Install PyTorch](#step-2-install-pytorch)
+    - [Step 3: Install OpenMMLab 2.x Codebases](#step-3-install-openmmlab-2x-codebases)
+    - [Step 4: Install `groksar`](#step-4-install-groksar)
+  - [Model Zoo and Benchmark](#model-zoo-and-benchmark)
+    - [Leaderboard](#leaderboard)
+    - [Model Zoo](#model-zoo)
+      - [DenoDet](#denodet)
 
 
 ## Installation
@@ -63,50 +63,71 @@ $ cd groksar
 
 ### Model Zoo
 
-#### Method A
+#### DenoDet
 
+MSAR
 <table>
     <tr>
         <td>Model</td>
-        <td>mAP</td>
-        <td>#Params</td>
+        <td>mAP(07)</td>
+        <td>mAP(12)</td>
         <td>FLOPs</td>
         <td>Config</td>
         <td>Training Log</td>
         <td>Checkpoint</td>
-        <td>Visualization</td>
     <tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="4">
-            <a href=""> 百度网盘 </a> | <a href=""> OneDirve </a>
+        <td>DenoDet</td>
+        <td>69.90</td>
+        <td>71.21</td>
+        <td>12.89G</td>
+        <td ><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/fcos_r50-pytorch_fpn_dct_attention_3x_MSAR.py"> fcos_r50-pytorch_fpn_dct_attention_3x_MSAR </a>
         </td>
-    <tr>
+        <td colspan="2">
+            <a href="https://pan.baidu.com/s/1JsLqIUr0_BA3Kh44USQ6gQ?pwd=jnfi"> 百度网盘 </a> | <a href=""> OneDirve </a>
+        </td>
 </table>
 
-#### Method B
-
+SAR-AIRcraft-1.0
 <table>
     <tr>
         <td>Model</td>
-        <td>mAP</td>
-        <td>#Params</td>
+        <td>mAP(07)</td>
+        <td>mAP(12)</td>
         <td>FLOPs</td>
         <td>Config</td>
         <td>Training Log</td>
         <td>Checkpoint</td>
-        <td>Visualization</td>
     <tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="4">
-            <a href=""> 百度网盘 </a> | <a href=""> OneDirve </a>
+        <td>DenoDet</td>
+        <td>68.60</td>
+        <td>69.56</td>
+        <td>48.53G</td>
+        <td><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/reppoints-bbox_r50_fpn-gn_head-gn-grid_dct_attention_1x_SAR-AIRcraft-1.0.py"> reppoints-bbox_r50_fpn-gn_head-gn-grid_dct_attention_1x_SAR-AIRcraft-1.0 </a></td>
+        <td colspan="2">
+            <a href="https://pan.baidu.com/s/19LfXFmSpHJAcLovvE9NE8A?pwd=vwz7"> 百度网盘 </a> | <a href=""> OneDirve </a>
         </td>
+</table>
+
+AIR-SARShip-1.0
+<table>
     <tr>
+        <td>Model</td>
+        <td>mAP(07)</td>
+        <td>mAP(12)</td>
+        <td>FLOPs</td>
+        <td>Config</td>
+        <td>Training Log</td>
+        <td>Checkpoint</td>
+    <tr>
+    <tr>
+        <td>DenoDet</td>
+        <td>72.42</td>
+        <td>73.36</td>
+        <td>48.52G</td>
+        <td><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/reppoints-bbox_r50_fpn-gn_head-gn-grid_dct_attention_6x_AIR-SARShip-1.0.py"> reppoints-bbox_r50_fpn-gn_head-gn-grid_dct_attention_6x_AIR-SARShip-1.0 </a></td>
+        <td colspan="2">
+            <a href="https://pan.baidu.com/s/1lktF3yxp4PE1fDGWIx5OoA?pwd=w07n"> 百度网盘 </a> | <a href=""> OneDirve </a>
+        </td>
 </table>
