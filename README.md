@@ -81,7 +81,7 @@ MSAR
         <td>69.90</td>
         <td>71.21</td>
         <td>12.89G</td>
-        <td ><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/fcos_r50-pytorch_fpn_dct_attention_3x_MSAR.py"> fcos_r50-pytorch_fpn_dct_attention_3x_MSAR </a>
+        <td ><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/DenoDet_3x_MSAR.py"> DenoDet_3x_MSAR.py </a>
         </td>
         <td colspan="2">
             <a href="https://pan.baidu.com/s/1JsLqIUr0_BA3Kh44USQ6gQ?pwd=jnfi"> 百度网盘 </a> | <a href=""> OneDirve </a>
@@ -104,7 +104,7 @@ SAR-AIRcraft-1.0
         <td>68.60</td>
         <td>69.56</td>
         <td>48.53G</td>
-        <td><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/reppoints-bbox_r50_fpn-gn_head-gn-grid_dct_attention_1x_SAR-AIRcraft-1.0.py"> reppoints-bbox_r50_fpn-gn_head-gn-grid_dct_attention_1x_SAR-AIRcraft-1.0 </a></td>
+        <td><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/DenoDet_1x_SAR-AIRcraft-1.0.py"> DenoDet_1x_SAR-AIRcraft-1.0.py </a></td>
         <td colspan="2">
             <a href="https://pan.baidu.com/s/19LfXFmSpHJAcLovvE9NE8A?pwd=vwz7"> 百度网盘 </a> | <a href=""> OneDirve </a>
         </td>
@@ -126,7 +126,7 @@ AIR-SARShip-1.0
         <td>72.42</td>
         <td>73.36</td>
         <td>48.52G</td>
-        <td><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/reppoints-bbox_r50_fpn-gn_head-gn-grid_dct_attention_6x_AIR-SARShip-1.0.py"> reppoints-bbox_r50_fpn-gn_head-gn-grid_dct_attention_6x_AIR-SARShip-1.0 </a></td>
+        <td><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/DenoDet_6x_AIR-SARShip-1.0.py"> DenoDet_6x_AIR-SARShip-1.0.py </a></td>
         <td colspan="2">
             <a href="https://pan.baidu.com/s/1lktF3yxp4PE1fDGWIx5OoA?pwd=w07n"> 百度网盘 </a> | <a href=""> OneDirve </a>
         </td>
