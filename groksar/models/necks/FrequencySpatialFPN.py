@@ -7,7 +7,7 @@ from mmcv.cnn import ConvModule
 from mmengine.model import BaseModule
 from torch import Tensor
 
-from sareye.registry import MODELS
+from groksar.registry import MODELS
 from mmdet.utils import ConfigType, MultiConfig, OptConfigType
 import torch
 import math

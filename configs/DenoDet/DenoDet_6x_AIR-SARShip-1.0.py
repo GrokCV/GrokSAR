@@ -3,10 +3,9 @@ _base_ = [
     '../_base_/schedules/schedule_6x.py',
     'mmdet::_base_/default_runtime.py'
 ]
-
-# model settings
+norm_cfg = dict(type='GN', num_groups=32, requires_grad=True)
 model = dict(
-    type='FCOS',
+    type='RepPointsDetector',
     data_preprocessor=dict(
         type='DetDataPreprocessor',
         mean=[43.35241434599897, 43.35241434599897, 43.35241434599897],
@@ -24,41 +23,62 @@ model = dict(
         style='pytorch',
         init_cfg=dict(type='Pretrained', checkpoint='torchvision://resnet50')),
     neck=dict(
-        type='sareye.FrequencySpatialFPN',
+        type='groksar.FrequencySpatialFPN',
         in_channels=[256, 512, 1024, 2048],
         out_channels=256,
         start_level=1,
-        add_extra_convs='on_output',  # use P5
+        add_extra_convs='on_input',
         num_outs=5,
-        relu_before_extra_convs=True),
+        norm_cfg=norm_cfg),
     bbox_head=dict(
-        type='FCOSHead',
+        type='RepPointsHead',
         num_classes=1,
         in_channels=256,
-        stacked_convs=4,
         feat_channels=256,
-        strides=[8, 16, 32, 64, 128],
+        point_feat_channels=256,
+        stacked_convs=3,
+        num_points=9,
+        gradient_mul=0.1,
+        point_strides=[8, 16, 32, 64, 128],
+        point_base_scale=4,
         loss_cls=dict(
             type='FocalLoss',
             use_sigmoid=True,
             gamma=2.0,
             alpha=0.25,
             loss_weight=1.0),
-        loss_bbox=dict(type='IoULoss', loss_weight=1.0),
-        loss_centerness=dict(
-            type='CrossEntropyLoss', use_sigmoid=True, loss_weight=1.0)),
-    # testing settings
+        loss_bbox_init=dict(type='SmoothL1Loss', beta=0.11, loss_weight=0.5),
+        loss_bbox_refine=dict(type='SmoothL1Loss', beta=0.11, loss_weight=1.0),
+        transform_method='minmax',
+        use_grid_points=True,
+        norm_cfg=norm_cfg),
+    # training and testing settings
+    train_cfg=dict(
+        init=dict(
+            assigner=dict(type='MaxIoUAssigner',
+                pos_iou_thr=0.5,
+                neg_iou_thr=0.4,
+                min_pos_iou=0,
+                ignore_iof_thr=-1),
+            allowed_border=-1,
+            pos_weight=-1,
+            debug=False),
+        refine=dict(
+            assigner=dict(
+                type='MaxIoUAssigner',
+                pos_iou_thr=0.5,
+                neg_iou_thr=0.4,
+                min_pos_iou=0,
+                ignore_iof_thr=-1),
+            allowed_border=-1,
+            pos_weight=-1,
+            debug=False)),
     test_cfg=dict(
         nms_pre=1000,
         min_bbox_size=0,
         score_thr=0.05,
         nms=dict(type='nms', iou_threshold=0.5),
-        max_per_img=500))
-
-# training schedule for 1x
-train_cfg = dict(type='EpochBasedTrainLoop', max_epochs=72, val_interval=1)
-val_cfg = dict(type='ValLoop')
-test_cfg = dict(type='TestLoop')
+        max_per_img=100))
 
 # optimizer
 base_lr = 1.0

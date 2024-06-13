@@ -1,5 +1,5 @@
 # dataset settings
-dataset_type = 'sareye.DotaBig2SmallDataset'
+dataset_type = 'groksar.DotaBig2SmallDataset'
 backend_args = None
 
 METAINFO = {
@@ -63,5 +63,5 @@ val_dataloader = dict(
     ))
 test_dataloader = val_dataloader
 
-val_evaluator = dict(type='sareye.DotaBig2SmallMetric', metric='mAP', eval_mode='11points')
+val_evaluator = dict(type='groksar.DotaBig2SmallMetric', metric='mAP', eval_mode='11points')
 test_evaluator = val_evaluator

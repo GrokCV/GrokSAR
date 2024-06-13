@@ -16,8 +16,8 @@ from mmengine.fileio import dump
 from mmengine.logging import MMLogger
 
 from mmrotate.evaluation import eval_rbbox_map
-from sareye.evaluation.functional.mean_ap import eval_map
-from sareye.registry import METRICS
+from groksar.evaluation.functional.mean_ap import eval_map
+from groksar.registry import METRICS
 from mmrotate.structures.bbox import rbox2qbox
 
 

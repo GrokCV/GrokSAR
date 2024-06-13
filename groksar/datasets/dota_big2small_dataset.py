@@ -5,7 +5,7 @@ from typing import List, Tuple
 
 from mmengine.dataset import BaseDataset
 
-from sareye.registry import DATASETS
+from groksar.registry import DATASETS
 
 
 @DATASETS.register_module()

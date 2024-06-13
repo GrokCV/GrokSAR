@@ -8,8 +8,8 @@ import numpy as np
 from mmengine.evaluator import BaseMetric
 from mmengine.logging import MMLogger
 
-from sareye.registry import METRICS
-from sareye.evaluation.functional.mean_ap import eval_map
+from groksar.registry import METRICS
+from groksar.evaluation.functional.mean_ap import eval_map
 from mmdet.evaluation.functional import eval_recalls
 
 

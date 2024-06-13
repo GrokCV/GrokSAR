@@ -10,7 +10,7 @@ from mmengine.runner import Runner
 
 from mmseg.registry import RUNNERS
 
-from code_repo_template.datasets import *
+from groksar.datasets import *
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a segmentor')
