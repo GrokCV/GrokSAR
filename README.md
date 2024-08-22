@@ -16,6 +16,8 @@ GrokSAR is an open-source toolbox for SAR target detection and recognition.
   - [Leaderboard](#leaderboard)
   - [Model Zoo](#model-zoo)
     - [DenoDet](#denodet)
+- [Citation](#citation)
+- [License](#license)
 
 
 ## Installation
@@ -155,3 +157,27 @@ AIR-SARShip-1.0
             <a href="https://pan.baidu.com/s/1lktF3yxp4PE1fDGWIx5OoA?pwd=w07n"> 百度网盘 </a> | <a href="https://1drv.ms/f/s!AmElF7K4aY9phG32rZfCEjAcP-qA?e=3fCH3f"> OneDirve </a>
         </td>
 </table>
+
+## Citation
+
+If you use this toolbox or benchmark in your research, please cite this project.
+
+```bibtex
+@article{dai2024denodet,
+	title={DenoDet: Attention as Deformable Multi-Subspace Feature Denoising for Target Detection in SAR Images},
+	author={Dai, Yimian and Zou, Minrui and Li, Yuxuan and Li, Xiang and Ni, Kang and Yang, Jian},
+	journal={arXiv preprint arXiv:2406.02833},
+	year={2024}
+}
+
+@article{li2024sardet100k,
+	title={SARDet-100K: Towards Open-Source Benchmark and ToolKit for Large-Scale SAR Object Detection}, 
+	author={Yuxuan Li and Xiang Li and Weijie Li and Qibin Hou and Li Liu and Ming-Ming Cheng and Jian Yang},
+	year={2024},
+	journal={arXiv},
+}
+```
+
+## License
+
+This project is released under the [Attribution-NonCommercial 4.0 International](LICENSE).
