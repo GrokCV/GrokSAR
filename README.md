@@ -7,6 +7,11 @@ GrokSAR is an open-source toolbox for SAR target detection and recognition.
   - [Step 2: Install PyTorch](#step-2-install-pytorch)
   - [Step 3: Install OpenMMLab 2.x Codebases](#step-3-install-openmmlab-2x-codebases)
   - [Step 4: Install `groksar`](#step-4-install-groksar)
+- [Getting Started](#getting-started)
+  - [Training](#training)
+    - [Single GPU Training](#single-gpu-training)
+  - [Inference](#inference)
+    - [Single GPU Inference](#single-gpu-inference)
 - [Model Zoo and Benchmark](#model-zoo-and-benchmark)
   - [Leaderboard](#leaderboard)
   - [Model Zoo](#model-zoo)
@@ -54,6 +59,25 @@ python setup.py develop
 $ git clone git@github.com:GrokCV/groksar.git
 $ cd groksar
 ```
+
+## Getting Started
+
+### Training
+
+#### Single GPU Training
+
+```shell
+python tools/train_det.py configs/DenoDet/DenoDet_1x_SAR-AIRcraft-1.0.py
+```
+
+### Inference
+
+#### Single GPU Inference
+
+```shell
+python tools/test_det.py configs/DenoDet/DenoDet_1x_SAR-AIRcraft-1.0.py {checkpoint_path}
+```
+
 
 ## Model Zoo and Benchmark
 
