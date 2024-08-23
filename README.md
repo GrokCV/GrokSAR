@@ -10,8 +10,10 @@ GrokSAR is an open-source toolbox for SAR target detection and recognition.
 - [Getting Started](#getting-started)
   - [Training](#training)
     - [Single GPU Training](#single-gpu-training)
+    - [Multi GPU Training](#multi-gpu-training)
   - [Inference](#inference)
     - [Single GPU Inference](#single-gpu-inference)
+    - [Multi GPU Inference](#multi-gpu-inference)
 - [Model Zoo and Benchmark](#model-zoo-and-benchmark)
   - [Leaderboard](#leaderboard)
   - [Model Zoo](#model-zoo)
@@ -68,18 +70,94 @@ $ cd groksar
 
 #### Single GPU Training
 
+For SAR-AIRcraft-1.0 dataset:
+
 ```shell
 python tools/train_det.py configs/DenoDet/DenoDet_1x_SAR-AIRcraft-1.0.py
 ```
+
+For MSAR dataset:
+
+```shell
+python tools/train_det.py configs/DenoDet/DenoDet_3x_MSAR.py
+```
+
+For AIR-SARShip-1.0 dataset:
+
+```shell
+python tools/train_det.py configs/DenoDet/DenoDet_6x_AIR-SARShip-1.0.py
+```
+
+#### Multi GPU Training 
+
+Take a 4-GPU machine as example.
+
+For SAR-AIRcraft-1.0 dataset:
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=29500 tools/dist_train.sh configs/DenoDet/DenoDet_1x_SAR-AIRcraft-1.0.py 4
+```
+
+For MSAR dataset:
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=29500 tools/dist_train.sh configs/DenoDet/DenoDet_3x_MSAR.py 4
+```
+
+For AIR-SARShip-1.0 dataset:
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=29500 tools/dist_train.sh configs/DenoDet/DenoDet_6x_AIR-SARShip-1.0.py 4
+```
+Here, `4` is the number of GPUs in your machine.
 
 ### Inference
 
 #### Single GPU Inference
 
+For SAR-AIRcraft-1.0 dataset:
+
 ```shell
 python tools/test_det.py configs/DenoDet/DenoDet_1x_SAR-AIRcraft-1.0.py {checkpoint_path}
 ```
 
+For MSAR dataset:
+
+```shell
+python tools/test_det.py configs/DenoDet/DenoDet_3x_MSAR.py {checkpoint_path}
+```
+
+For AIR-SARShip-1.0 dataset:
+
+```shell
+python tools/test_det.py configs/DenoDet/DenoDet_6x_AIR-SARShip-1.0.py {checkpoint_path}
+```
+
+Here, `{checkpoint_path}` represents the path to the weights you downloaded or trained. The `{curly braces}` are for reference only and should not be included when using the scripts.
+
+#### Multi GPU Inference 
+
+Take a 4-GPU machine as example.
+
+For SAR-AIRcraft-1.0 dataset:
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=29500 tools/dist_test.sh configs/DenoDet/DenoDet_1x_SAR-AIRcraft-1.0.py {checkpoint_path} 4
+```
+
+For MSAR dataset:
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=29500 tools/dist_test.sh configs/DenoDet/DenoDet_3x_MSAR.py {checkpoint_path} 4
+```
+
+For AIR-SARShip-1.0 dataset:
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=29500 tools/dist_test.sh configs/DenoDet/DenoDet_6x_AIR-SARShip-1.0.py {checkpoint_path} 4
+```
+
+Here, `{checkpoint_path}` represents the path to the weights you downloaded or trained. The `{curly braces}` are for reference only and should not be included when using the scripts, and `{4}` is the number of GPUs in your machine.
 
 ## Model Zoo and Benchmark
 
