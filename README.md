@@ -1,25 +1,32 @@
 # GrokSAR
+___
+## official repository for DenoDet
+"DenoDet: Attention as Deformable Multi-Subspace Feature Denoising for Target Detection in SAR Images" at: [https://arxiv.org/pdf/2406.02833](https://arxiv.org/pdf/2406.02833)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/denodet-attention-as-deformable-multi/2d-object-detection-on-sardet-100k)](https://paperswithcode.com/sota/2d-object-detection-on-sardet-100k?p=denodet-attention-as-deformable-multi)
+___
 
 GrokSAR is an open-source toolbox for SAR target detection and recognition.
 
-- [Installation](#installation)
-  - [Step 1: Create a conda environment](#step-1-create-a-conda-environment)
-  - [Step 2: Install PyTorch](#step-2-install-pytorch)
-  - [Step 3: Install OpenMMLab 2.x Codebases](#step-3-install-openmmlab-2x-codebases)
-  - [Step 4: Install `groksar`](#step-4-install-groksar)
-- [Getting Started](#getting-started)
-  - [Training](#training)
-    - [Single GPU Training](#single-gpu-training)
-    - [Multi GPU Training](#multi-gpu-training)
-  - [Inference](#inference)
-    - [Single GPU Inference](#single-gpu-inference)
-    - [Multi GPU Inference](#multi-gpu-inference)
-- [Model Zoo and Benchmark](#model-zoo-and-benchmark)
-  - [Leaderboard](#leaderboard)
-  - [Model Zoo](#model-zoo)
-    - [DenoDet](#denodet)
-- [Citation](#citation)
-- [License](#license)
+- [GrokSAR](#groksar)
+  - [official repository for DenoDet](#official-repository-for-denodet)
+  - [Installation](#installation)
+    - [Step 1: Create a conda environment](#step-1-create-a-conda-environment)
+    - [Step 2: Install PyTorch](#step-2-install-pytorch)
+    - [Step 3: Install OpenMMLab 2.x Codebases](#step-3-install-openmmlab-2x-codebases)
+    - [Step 4: Install `groksar`](#step-4-install-groksar)
+  - [Getting Started](#getting-started)
+    - [Training](#training)
+      - [Single GPU Training](#single-gpu-training)
+      - [Multi GPU Training](#multi-gpu-training)
+    - [Inference](#inference)
+      - [Single GPU Inference](#single-gpu-inference)
+      - [Multi GPU Inference](#multi-gpu-inference)
+  - [Model Zoo and Benchmark](#model-zoo-and-benchmark)
+    - [Leaderboard](#leaderboard)
+    - [Model Zoo](#model-zoo)
+      - [DenoDet](#denodet)
+  - [Citation](#citation)
+  - [License](#license)
 
 
 ## Installation
