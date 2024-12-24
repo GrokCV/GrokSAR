@@ -35,8 +35,8 @@ GrokSAR is an open-source toolbox for SAR target detection and recognition.
 ### Step 1: Create a conda environment
 
 ```shell
-$ conda create --name groksar python=3.9
-$ source activate groksar
+conda create --name groksar python=3.8
+source activate groksar
 ```
 
 ### Step 2: Install PyTorch
@@ -49,10 +49,10 @@ conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=
 
 ```shell
 # openmmlab codebases
-pip install -U openmim dadaptation --no-input
-mim install mmengine "mmcv>=2.0.0" "mmdet>=3.0.0" "mmsegmentation>=1.0.0" "mmrotate>=1.0.0rc1" mmyolo
+pip install -U openmim dadaptation cmake lit --no-input
+mim install mmengine "mmcv>=2.0.0rc4, <2.1.0" "mmdet>=3.0.0rc5, < 3.1.0" "mmsegmentation>=1.0.0" "mmrotate>=1.0.0rc1" mmyolo mmpretrain
 # heatmap generation dependencies
-pip install grad-cam
+pip install grad-cam==1.4.0
 # other dependencies
 pip install ninja --no-input
 pip install scikit-learn
