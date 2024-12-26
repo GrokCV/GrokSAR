@@ -252,15 +252,15 @@ If you use this toolbox or benchmark in your research, please cite this project.
 @article{dai2024denodet,
 	title={DenoDet: Attention as Deformable Multi-Subspace Feature Denoising for Target Detection in SAR Images},
 	author={Dai, Yimian and Zou, Minrui and Li, Yuxuan and Li, Xiang and Ni, Kang and Yang, Jian},
-	journal={arXiv preprint arXiv:2406.02833},
+	journal={IEEE Transactions on Aerospace and Electronic Systems (TAES)},
 	year={2024}
 }
 
-@article{li2024sardet100k,
+@inproceedings{li2024sardet100k,
 	title={SARDet-100K: Towards Open-Source Benchmark and ToolKit for Large-Scale SAR Object Detection}, 
 	author={Yuxuan Li and Xiang Li and Weijie Li and Qibin Hou and Li Liu and Ming-Ming Cheng and Jian Yang},
 	year={2024},
-	journal={arXiv},
+	booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems (NeurIPS)},
 }
 ```
 
