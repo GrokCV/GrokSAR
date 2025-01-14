@@ -78,6 +78,12 @@ $ cd groksar
 
 #### Single GPU Training
 
+For SARDet-100K dataset:
+
+```shell
+python tools/train_det.py configs/DenoDet/DenoDet_1x_SARDet_100k.py
+```
+
 For SAR-AIRcraft-1.0 dataset:
 
 ```shell
@@ -99,6 +105,12 @@ python tools/train_det.py configs/DenoDet/DenoDet_6x_AIR-SARShip-1.0.py
 #### Multi GPU Training 
 
 Take a 4-GPU machine as example.
+
+For SARDet-100K dataset:
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=29500 tools/dist_train.sh configs/DenoDet/DenoDet_1x_SARDet_100k.py 4
+```
 
 For SAR-AIRcraft-1.0 dataset:
 
@@ -123,6 +135,12 @@ Here, `4` is the number of GPUs in your machine.
 
 #### Single GPU Inference
 
+For SARDet-100K dataset:
+
+```shell
+python tools/test_det.py configs/DenoDet/DenoDet_1x_SARDet_100k.py {checkpoint_path}
+```
+
 For SAR-AIRcraft-1.0 dataset:
 
 ```shell
@@ -146,6 +164,12 @@ Here, `{checkpoint_path}` represents the path to the weights you downloaded or t
 #### Multi GPU Inference 
 
 Take a 4-GPU machine as example.
+
+For SARDet-100K dataset:
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 PORT=29500 tools/dist_test.sh configs/DenoDet/DenoDet_1x_SARDet_100k.py {checkpoint_path} 4
+```
 
 For SAR-AIRcraft-1.0 dataset:
 
@@ -176,6 +200,27 @@ Here, `{checkpoint_path}` represents the path to the weights you downloaded or t
 ### Model Zoo
 
 #### DenoDet
+
+SARDet-100K
+<table>
+    <tr>
+        <td>Model</td>
+        <td>mAP(COCO)</td>
+        <td>FLOPs</td>
+        <td>Config</td>
+        <td>Training Log</td>
+        <td>Checkpoint</td>
+    <tr>
+    <tr>
+        <td>DenoDet</td>
+        <td>55.88</td>
+        <td>52.69G</td>
+        <td ><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/DenoDet_1x_SARDet_100k.py"> DenoDet_1x_SARDet_100k.py </a>
+        </td>
+        <td colspan="2">
+            <a href="https://pan.baidu.com/s/1ZiXbWo9eHHP0LZYylcPpRQ?pwd=pdyh"> 百度网盘 </a>
+        </td>
+</table>
 
 MSAR
 <table>
