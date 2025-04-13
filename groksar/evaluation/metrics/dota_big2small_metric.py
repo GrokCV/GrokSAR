@@ -142,6 +142,9 @@ class DotaBig2SmallMetric(BaseMetric):
             elif self.predict_box_type == 'qbox':
                 ori_bboxes[..., :] = ori_bboxes[..., :] + np.array(
                     [x, y, x, y, x, y, x, y], dtype=np.float32)
+            elif self.predict_box_type == 'hbox':
+                ori_bboxes[..., :] = ori_bboxes[..., :] + np.array(
+                        [x, y, x, y], dtype=np.float32)
             else:
                 raise NotImplementedError
             label_dets = np.concatenate(
@@ -169,6 +172,9 @@ class DotaBig2SmallMetric(BaseMetric):
                     elif self.predict_box_type == 'qbox':
                         nms_dets, _ = nms_quadri(cls_dets[:, :8],
                                                  cls_dets[:, -1], self.iou_thr)
+                    elif self.predict_box_type == 'hbox':
+                        nms_dets, _ = nms(cls_dets[:, :4].float(),
+                                          cls_dets[:, -1].float(), self.iou_thr)
                     else:
                         raise NotImplementedError
                     big_img_results.append(nms_dets.cpu().numpy())
@@ -187,7 +193,7 @@ class DotaBig2SmallMetric(BaseMetric):
         ]
         file_objs = [open(f, 'w') for f in files]
         for img_id, dets_per_cls in zip(id_list, dets_list):
-            for f, dets in zip(file_objs, dets_per_cls):
+            for cls_idx, (f, dets) in enumerate(zip(file_objs, dets_per_cls)):
                 if dets.size == 0:
                     continue
                 th_dets = torch.from_numpy(dets)
@@ -196,11 +202,13 @@ class DotaBig2SmallMetric(BaseMetric):
                     qboxes = rbox2qbox(rboxes)
                 elif self.predict_box_type == 'qbox':
                     qboxes, scores = torch.split(th_dets, (8, 1), dim=-1)
+                elif self.predict_box_type == 'hbox':
+                    qboxes, scores = torch.split(th_dets, (4, 1), dim=-1)
                 else:
                     raise NotImplementedError
                 for qbox, score in zip(qboxes, scores):
                     txt_element = [img_id, str(round(float(score), 2))
-                                   ] + [f'{p:.2f}' for p in qbox]
+                                   ] + [f'{p:.2f}' for p in qbox] + [str(cls_idx)]
                     f.writelines(' '.join(txt_element) + '\n')
 
         for f in file_objs:
