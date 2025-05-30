@@ -218,7 +218,7 @@ SARDet-100K
         <td ><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/DenoDet_1x_SARDet_100k.py"> DenoDet_1x_SARDet_100k.py </a>
         </td>
         <td colspan="2">
-            <a href="https://pan.baidu.com/s/1ZiXbWo9eHHP0LZYylcPpRQ?pwd=pdyh"> 百度网盘 </a>
+            <a href="https://pan.baidu.com/s/1ZiXbWo9eHHP0LZYylcPpRQ?pwd=pdyh"> 百度网盘 </a> | <a href="https://1drv.ms/f/c/698f69b8b2172561/EgIfrje7GrxJkCWZjPEHi3oBxnaICQXnEmpzl5OtsuEIIA?e=wbxSwk"> OneDirve </a>
         </td>
 </table>
 
