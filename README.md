@@ -26,6 +26,7 @@ GrokSAR is an open-source toolbox for SAR target detection and recognition.
     - [Leaderboard](#leaderboard)
     - [Model Zoo](#model-zoo)
       - [DenoDet](#denodet)
+      - [DenoDet V2](#denodet-v2)
   - [Citation](#citation)
   - [License](#license)
 
@@ -57,6 +58,7 @@ pip install grad-cam==1.4.0
 pip install ninja --no-input
 pip install scikit-learn
 pip install psutil
+pip install scikit-image
 ```
 
 ### Step 4: Install `groksar`
@@ -286,6 +288,94 @@ AIR-SARShip-1.0
         <td><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/DenoDet_6x_AIR-SARShip-1.0.py"> DenoDet_6x_AIR-SARShip-1.0.py </a></td>
         <td colspan="2">
             <a href="https://pan.baidu.com/s/1lktF3yxp4PE1fDGWIx5OoA?pwd=w07n"> 百度网盘 </a> | <a href="https://1drv.ms/f/s!AmElF7K4aY9phG32rZfCEjAcP-qA?e=3fCH3f"> OneDirve </a>
+        </td>
+</table>
+
+#### DenoDet V2
+
+SARDet-100K(val set)
+<table>
+    <tr>
+        <td>Model</td>
+        <td>mAP(COCO)</td>
+        <td>FLOPs</td>
+        <td>Config</td>
+        <td>Training Log</td>
+        <td>Checkpoint</td>
+    <tr>
+    <tr>
+        <td>DenoDet V2</td>
+        <td>56.71</td>
+        <td>52.47G</td>
+        <td ><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDetV2/DenoDetV2_1x_SARDet_100k.py"> DenoDetV2_1x_SARDet_100k.py </a>
+        </td>
+        <td colspan="2">
+            <a href="https://pan.baidu.com/s/1Ab467RioPPCse1ea5AuuLQ?pwd=grok"> 百度网盘 </a> | <a href="https://1drv.ms/f/c/869d5f1d401ac2ec/ElTBf5nRCkpBtrLSrx-444UBacdKTmKmJ_YREyd7zjV6bw?e=tU73cd"> OneDirve </a>
+        </td>
+</table>
+
+SARDet-100K(test set)
+<table>
+    <tr>
+        <td>Model</td>
+        <td>mAP(COCO)</td>
+        <td>FLOPs</td>
+        <td>Config</td>
+        <td>Training Log</td>
+        <td>Checkpoint</td>
+    <tr>
+    <tr>
+        <td>DenoDet V2</td>
+        <td>56.39</td>
+        <td>0.21T</td>
+        <td ><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDetV2/DenoDetV2_1x_SARDet_100k_test.py"> DenoDetV2_1x_SARDet_100k_test.py </a>
+        </td>
+        <td colspan="2">
+            <a href="https://pan.baidu.com/s/1mlGBeByB2kSjJLbxnrhSOw?pwd=grok"> 百度网盘 </a> | <a href="https://1drv.ms/f/c/869d5f1d401ac2ec/EjzcFMZEbv9AqH5YD6v7_TwBhLLDev5xZ3yiPFKUx3KFfQ?e=6rQdoK"> OneDirve </a>
+        </td>
+</table>
+
+SAR-AIRcraft-1.0
+<table>
+    <tr>
+        <td>Model</td>
+        <td>mAP(07)</td>
+        <td>mAP(12)</td>
+        <td>FLOPs</td>
+        <td>Config</td>
+        <td>Training Log</td>
+        <td>Checkpoint</td>
+    <tr>
+    <tr>
+        <td>DenoDet V2</td>
+        <td>69.93</td>
+        <td>70.73</td>
+        <td>48.61G</td>
+        <td><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDetV2/DenoDetV2_1x_SAR-AIRcraft-1.0.py"> DenoDetV2_1x_SAR-AIRcraft-1.0.py </a></td>
+        <td colspan="2">
+            <a href="https://pan.baidu.com/s/1gEkKETMMYb_kR6UbSYQIcw?pwd=grok"> 百度网盘 </a> | <a href="https://1drv.ms/f/c/869d5f1d401ac2ec/ElY5Slvg07hCtuTy2zOmAxoBCDWhuJpHKdKl75x8cRHREQ?e=fikLa9"> OneDirve </a>
+        </td>
+</table>
+
+AIR-SARShip-1.0
+<table>
+    <tr>
+        <td>Model</td>
+        <td>mAP(07)</td>
+        <td>mAP(12)</td>
+        <td>FLOPs</td>
+        <td>Config</td>
+        <td>Training Log</td>
+        <td>Checkpoint</td>
+    <tr>
+    <tr>
+        <td>DenoDet V2</td>
+        <td>73.98</td>
+        <td>74.86</td>
+        <td>48.61G</td>
+        <td><a href="https://github.com/GrokCV/GrokSAR/blob/master/configs/DenoDet/DenoDetV2_6x_AIR-SARShip-1.0.py"> DenoDetV2_6x_AIR-SARShip-1.0.py </a></td>
+        <td colspan="2">
+            <a href="https://pan.baidu.com/s/1gdhLgnlQ85uELdB4IOBToA?pwd=grok"> 百度网盘 </a> | <a href="https://1drv.ms/f/c/869d5f1d401ac2ec/EsAyh0Gdd3tNhImS03HRK6oBQRkjT3x-RO2NSvzmi4en_Q?e=skKdN0"> OneDirve </a>
         </td>
 </table>
 
