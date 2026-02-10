@@ -1,7 +1,8 @@
 # GrokSAR
 ___
 ## official repository for DenoDet and DenoDet V2!
-[TAES 2024] "[DenoDet: Attention as Deformable Multi-Subspace Feature Denoising for Target Detection in SAR Images](https://arxiv.org/pdf/2406.02833)"
+[TAES 2024] "[DenoDet: Attention as Deformable Multi-Subspace Feature Denoising for Target Detection in SAR Images](https://ieeexplore.ieee.org/document/10770564)"
+
 [AAAI 2026] "[DenoDet V2: Phase-Amplitude Cross Denoising for SAR Object Detection](https://arxiv.org/pdf/2508.09392)"
 ___
 
