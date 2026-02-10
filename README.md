@@ -1,15 +1,14 @@
 # GrokSAR
 ___
-## official repository for DenoDet
-"DenoDet: Attention as Deformable Multi-Subspace Feature Denoising for Target Detection in SAR Images" at: [https://arxiv.org/pdf/2406.02833](https://arxiv.org/pdf/2406.02833)
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/denodet-attention-as-deformable-multi/2d-object-detection-on-sardet-100k)](https://paperswithcode.com/sota/2d-object-detection-on-sardet-100k?p=denodet-attention-as-deformable-multi)
+## official repository for DenoDet and DenoDet V2!
+[TAES 2024] "[DenoDet: Attention as Deformable Multi-Subspace Feature Denoising for Target Detection in SAR Images](https://arxiv.org/pdf/2406.02833)"
+[AAAI 2026] "[DenoDet V2: Phase-Amplitude Cross Denoising for SAR Object Detection](https://arxiv.org/pdf/2508.09392)"
 ___
 
 GrokSAR is an open-source toolbox for SAR target detection and recognition.
 
 - [GrokSAR](#groksar)
-  - [official repository for DenoDet](#official-repository-for-denodet)
+  - [official repository for DenoDet and DenoDet V2!](#official-repository-for-denodet-and-denodet-v2)
   - [Installation](#installation)
     - [Step 1: Create a conda environment](#step-1-create-a-conda-environment)
     - [Step 2: Install PyTorch](#step-2-install-pytorch)
@@ -384,6 +383,13 @@ AIR-SARShip-1.0
 If you use this toolbox or benchmark in your research, please cite this project.
 
 ```bibtex
+@inproceedings{ni2026denodetv2,
+    title={DenoDet V2: Phase-Amplitude Cross Denoising for SAR Object Detection},
+    author={Ni, Kang and Zou, Minrui and Li, Yuxuan and Li, Xiang and Guo, Kehua and Cheng, Ming-Ming and Dai, Yimian}, 
+    booktitle={The 40th Annual AAAI Conference on Artificial Intelligence (AAAI)},
+    year={2026}
+}
+
 @article{dai2024denodet,
 	title={DenoDet: Attention as Deformable Multi-Subspace Feature Denoising for Target Detection in SAR Images},
 	author={Dai, Yimian and Zou, Minrui and Li, Yuxuan and Li, Xiang and Ni, Kang and Yang, Jian},
