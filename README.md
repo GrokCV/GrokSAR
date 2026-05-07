@@ -1,34 +1,20 @@
 # GrokSAR
-___
-## official repository for DenoDet and DenoDet V2!
-[TAES 2024] "[DenoDet: Attention as Deformable Multi-Subspace Feature Denoising for Target Detection in SAR Images](https://ieeexplore.ieee.org/document/10770564)"
 
-[AAAI 2026] "[DenoDet V2: Phase-Amplitude Cross Denoising for SAR Object Detection](https://arxiv.org/pdf/2508.09392)"
-___
+## Introduction
 
 GrokSAR is an open-source toolbox for SAR target detection and recognition.
 
-- [GrokSAR](#groksar)
-  - [official repository for DenoDet and DenoDet V2!](#official-repository-for-denodet-and-denodet-v2)
-  - [Installation](#installation)
-    - [Step 1: Create a conda environment](#step-1-create-a-conda-environment)
-    - [Step 2: Install PyTorch](#step-2-install-pytorch)
-    - [Step 3: Install OpenMMLab 2.x Codebases](#step-3-install-openmmlab-2x-codebases)
-    - [Step 4: Install `groksar`](#step-4-install-groksar)
-  - [Getting Started](#getting-started)
-    - [Training](#training)
-      - [Single GPU Training](#single-gpu-training)
-      - [Multi GPU Training](#multi-gpu-training)
-    - [Inference](#inference)
-      - [Single GPU Inference](#single-gpu-inference)
-      - [Multi GPU Inference](#multi-gpu-inference)
-  - [Model Zoo and Benchmark](#model-zoo-and-benchmark)
-    - [Leaderboard](#leaderboard)
-    - [Model Zoo](#model-zoo)
-      - [DenoDet](#denodet)
-      - [DenoDet V2](#denodet-v2)
-  - [Citation](#citation)
-  - [License](#license)
+
+## Official repository for DenoDet and DenoDet V2!
+
+[TAES 2024] "[DenoDet: Attention as Deformable Multi-Subspace Feature Denoising for Target Detection in SAR Images](https://ieeexplore.ieee.org/document/10770564)"
+
+<img src="resources/DenoDetV1.png">
+
+
+[AAAI 2026] "[DenoDet V2: Phase-Amplitude Cross Denoising for SAR Object Detection](https://arxiv.org/pdf/2508.09392)"
+
+<img src="resources/DenoDetV2.png">
 
 
 ## Installation
@@ -76,7 +62,12 @@ $ cd groksar
 
 ## Getting Started
 
+
 ### Training
+
+#### Dataset folders
+
+See **[Dataset folders and setup](docs/datasets.md)** for directory layouts per dataset, label formats, and the `tools/img_split.py --base-json ...` commands to build `split_*` folders before training.
 
 #### Single GPU Training
 
